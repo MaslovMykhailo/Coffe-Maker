@@ -1,0 +1,18 @@
+table {
+    margin: 30px 80px 30px;
+}
+table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+td {
+    width: 100px;
+    height: 40px;
+}
+caption {
+    font-size: 20pt;
+    text-align: left;
+}
+.hidden-td {
+    visibility: hidden;
+}
