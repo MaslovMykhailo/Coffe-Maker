@@ -1,18 +1,14 @@
 table {
-    margin: 30px 80px 30px;
+    margin: 30px auto 30px;
+    table-layout: fixed;
+    width: 70%;
+    height: 250px;
 }
 table, th, td {
     border: 1px solid black;
     border-collapse: collapse;
 }
-td {
-    width: 100px;
-    height: 40px;
-}
 caption {
     font-size: 20pt;
     text-align: left;
-}
-.hidden-td {
-    visibility: hidden;
 }

@@ -3,11 +3,10 @@ const addTrToTable = (table) => {
   table.appendChild(row);
 };
 
-const addTdToTable = (table, row, colspan, rowspan, className) => {
+const addTdToTable = (table, row, colspan, rowspan) => {
   const td = document.createElement('td');
   if (colspan) td.setAttribute('colspan', colspan);
   if (rowspan) td.setAttribute('rowspan', rowspan);
-  if (className) td.className = className;
   table.children[row].appendChild(td);
 };
 
@@ -44,23 +43,21 @@ const tablesCreators = [
   
   (table) => {
     addTrToTable(table);
-    
-    new Array(6).fill(null).forEach((elem, j) => {
+    new Array(5).fill(null).forEach((elem, j) => {
       let count = j % 2 ? 3 : 4;
       addTrToTable(table);
       for (let i = 0 ; i < count ; i++) addTdToTable(table, j+2, 0, 2);
     });
     
+    addTrToTable(table);
     for (let i = 0 ; i < 7 ; i++) {
       if (i % 2) {
         addTdToTable(table, 1, 0, 2);
+        addTdToTable(table, 7);
       } else {
         addTdToTable(table, 1);
       }
     }
-    new Array(7).fill(null).forEach((elem, i) => {
-      addTdToTable(table, i+1, 0, 0, 'hidden-td')
-    });
     
     return table;
   },
@@ -75,9 +72,6 @@ const tablesCreators = [
     addTdToTable(table, i+1, 3);
     addTdToTable(table, i+1, diff[k][1]);
     });
-    
-    addTrToTable(table);
-    new Array(7).fill(null).forEach(() => { addTdToTable(table, 8, 0, 0, 'hidden-td') });
     
     return table;
   }
