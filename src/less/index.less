@@ -1,5 +1,38 @@
 body {
   margin: 0;
+  background: aliceblue url("png/backround.png") repeat-y center;
+  background-size: contain;
+}
+
+.font-roboto {
+  font-family: Roboto;
+}
+
+.font-georgia {
+  font-family: Georgia;
+}
+
+.horizontal-center {
+  display: block;
+  text-align: center;
+  margin: auto;
+}
+
+.menu {
+  ul {
+    text-align: center;
+    li {
+      display: inline;
+    }
+  }
+}
+
+.clearfix:after {
+  content: "."; /* добавить содержимое: "." */
+  display: block;  /* сделать блоком, т.к. inline не может иметь clear */
+  clear: both;  /* с обеих сторон clear */
+  visibility: hidden; /* сделать невидимым, зачем нам точка внизу? */
+  height: 0;  /* сделать высоту 0, чтобы не занимал место */
 }
 
 @import "header";

@@ -1,4 +1,84 @@
 header {
-  display: flex;
-  background: grey;
+  position: relative;
+
+  .bottom-line{
+    height: 71px;
+    border-bottom: 1px solid #7B746A;
+    float: left;
+  }
+
+  .small-box {
+    width: 10%;
+  }
+
+  #logo {
+    float: left;
+    width: 10%;
+    position: relative;
+    margin-top: 17px;
+    color: white;
+    height: 105px;
+    background: url("png/logo/logo.png") no-repeat center center;
+    background-size: contain;
+
+    span {
+      font-weight: bold;
+      position: absolute;
+      top: 50%;
+      margin-top: -0.6em;
+      font-size: 18px;
+    }
+
+    span:first-child {
+      left: 13%;
+    }
+
+    span:last-child {
+      right: 13%;
+    }
+  }
+
+  .big-box {
+    width: 15%;
+  }
+
+  #header-menu {
+    width: 30%;
+    position: relative;
+    color: white;
+    padding: 0;
+
+    ul {
+      position: absolute;
+      top: 13%;
+      padding: 0;
+      li {
+        font-size: 9px;
+        font-weight: bold;
+        margin-right: 5%;
+
+        img {
+          width: 3px;
+        }
+      }
+      li:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  .phone-number {
+    width: 20%;
+    position: relative;
+    color: white;
+
+    span {
+      position: absolute;
+      top: 50%;
+      right: 20%;
+      font-size: 18px;
+      font-weight: bold;
+      margin-top: -0.625em;
+    }
+  }
 }
