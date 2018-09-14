@@ -4,44 +4,11 @@
 
 body {
   margin: 0;
-  background: lightgray url("png/background.png") repeat center;
+  background: #ececec url("png/background.png") repeat center;
   background-size: cover;
 }
 
-.font-roboto {
-  font-family: Roboto, serif;
-}
-
-.font-georgia {
-  font-family: Georgia, sans-serif;
-}
-
-.horizontal-center {
-  display: block;
-  text-align: center;
-  margin: auto;
-}
-
-.menu {
-  ul {
-    text-align: center;
-    li {
-      display: inline;
-    }
-  }
-}
-
-.border-bottom-figure {
-  width: 100%;
-}
-
-.clearfix:after {
-  content: "."; /* добавить содержимое: "." */
-  display: block;  /* сделать блоком, т.к. inline не может иметь clear */
-  clear: both;  /* с обеих сторон clear */
-  visibility: hidden; /* сделать невидимым, зачем нам точка внизу? */
-  height: 0;  /* сделать высоту 0, чтобы не занимал место */
-}
-
+@import "common";
 @import "header";
 @import "banner";
+@import "programs";

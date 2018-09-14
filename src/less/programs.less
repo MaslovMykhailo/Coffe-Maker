@@ -1,0 +1,211 @@
+#programs {
+
+  .small-text {
+    font-size: 11.2px;
+    color: #6d7075;
+  }
+
+  h2 {
+    margin-top: 5.9%;
+
+    img {
+      width: 0.8%;
+      margin: 0 7px 7px;
+    }
+  }
+
+  span {
+    margin-top: 1.7%;
+  }
+
+  #programs-menu {
+    width: 62%;
+    display: block;
+    margin-top: 5.1%;
+    border-bottom: 1px solid #6d7075;
+
+    ul {
+      width: 100%;
+      padding: 0;
+      margin: 2.8%;
+      li {
+        padding: 2% 8% 2.6%;
+        margin: 0 1.7%;
+        a {
+          font-weight: bold;
+          cursor: pointer;
+          letter-spacing: 1.8px;
+          font-size: 14px;
+          color: #6d7075;
+        }
+
+        a:hover {
+          color: black;
+        }
+      }
+
+      .active {
+        border-bottom: 2px solid black;
+        a {
+          color: black;
+        }
+      }
+    }
+  }
+
+  figure {
+    display: block;
+    position: relative;
+    width: 62%;
+
+    .fon-text {
+      display: block;
+      position: absolute;
+      z-index: -1;
+      right: 5%;
+      margin: -1.5% 0 0;
+
+      font-size: 145px;
+      font-weight: bold;
+      color: #dddddd;
+    }
+
+    .image {
+      margin-top: 8.5%;
+      float: left;
+      width: 54.2%;
+    }
+
+    .info {
+      float: left;
+      margin: 6% 0 0 5%;
+
+      display: flex;
+      flex-direction: column;
+
+      h3 {
+        font-weight: bold;
+        font-size: 26px;
+        margin-bottom: 24%;
+      }
+
+      span {
+        position: relative;
+        font-size: 12px;
+        text-align: left;
+        margin:0 0 11% 17%;
+
+        img {
+          position: absolute;
+          width: 12%;
+          margin: -2% 0 0 -19%;
+        }
+      }
+
+      .price {
+        margin: -3% 0 0 1%;
+        font-size: 40px;
+        font-weight: bold;
+
+        span {
+          margin: 0;
+          font-size: 24px;
+        }
+      }
+
+      button {
+        margin-top: 9%;
+        width: 89%;
+        padding: 7% 0;
+
+        font-size: 10px;
+        font-weight: bold;
+        color: white;
+        border: none;
+        background: black;
+        letter-spacing: 1px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #6d7075;
+      }
+    }
+  }
+
+  .articles {
+    width: 62%;
+    margin-top: 3.5%;
+
+    hr {
+      background: #6d7075;
+      margin-bottom: -2%;
+    }
+
+    article {
+      float: left;
+      width: 28%;
+
+      text-align: left;
+      margin-right: 8%;
+
+      h4 {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 13.5px;
+      }
+
+      p {
+        line-height: 25px;
+        font-size: 11px;
+        color: #6d7075;
+      }
+    }
+
+    article:last-child {
+      margin-right: 0;
+    }
+  }
+
+  table {
+    margin: 1% 0 0 19%;
+    width: 36.5%;
+    border-collapse: collapse;
+    border: 1px solid black;
+
+    td:nth-child(1) {
+      width: 7.5%;
+    }
+
+    td {
+      border: 1px solid #6d7075;
+      line-height: 25px;
+      font-size: 11px;
+      color: #6d7075;
+      padding-left: 2%;
+    }
+
+    .true {
+      background: url("png/programs/true.png") center center no-repeat;
+      background-size: 12px 10px;
+    }
+
+    .false {
+      background: url("png/programs/false.png") center center no-repeat;
+      background-size: 10px 10px;
+    }
+
+    caption {
+      text-transform: uppercase;
+      font-size: 13px;
+      text-align: left;
+    }
+  }
+
+  .beans {
+    width: 40.5%;
+    position: absolute;
+    right: 0;
+    top: 252%;
+  }
+}
