@@ -1,23 +1,21 @@
 header {
-  position: relative;
+  display: flex;
 
   .bottom-line{
     height: 71px;
     border-bottom: 1px solid #7B746A;
-    float: left;
   }
 
   .small-box {
-    width: 10%;
+    width: 22px;
   }
 
   #logo {
-    float: left;
-    width: 10%;
+    width: 217px;
     position: relative;
     margin-top: 17px;
     color: white;
-    height: 105px;
+    height: 106px;
     background: url("png/logo/logo.png") no-repeat center center;
     background-size: contain;
 
@@ -34,49 +32,58 @@ header {
     }
 
     span:last-child {
-      right: 13%;
+      right: 12%;
     }
   }
 
   .big-box {
-    width: 15%;
+    flex: auto;
   }
 
   #header-menu {
-    width: 30%;
+    width: 500px;
     position: relative;
     color: white;
     padding: 0;
 
     ul {
+      width: 100%;
       position: absolute;
       top: 13%;
       padding: 0;
       li {
         font-size: 9px;
         font-weight: bold;
-        margin-right: 5%;
+        padding: 0 10px 28px;
 
         img {
           width: 3px;
+          margin-bottom: 0.1em;
         }
       }
       li:last-child {
         margin-right: 0;
       }
+
+      .active {
+        border-bottom: 2px solid #eab96a;
+        a {
+          color: #eab96a;
+        }
+      }
     }
   }
 
   .phone-number {
-    width: 20%;
+    width: 240px;
     position: relative;
     color: white;
 
     span {
       position: absolute;
       top: 50%;
-      right: 20%;
-      font-size: 18px;
+      right: 10%;
+      font-size: 20px;
       font-weight: bold;
       margin-top: -0.625em;
     }
