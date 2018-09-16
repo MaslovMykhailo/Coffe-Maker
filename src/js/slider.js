@@ -1,25 +1,26 @@
 const slider = {
   prev: config => () => {
-      config.otherBehaviorBefore();
+      config.otherBehaviorBefore && config.otherBehaviorBefore();
 
       let list = document.getElementById(config.listId);
       config.position = Math.min(config.position + config.shiftWidth * config.count, 0);
       list.style.marginLeft = config.position + config.sizeType;
 
-      config.otherBehaviorAfter();
+      config.otherBehaviorAfter && config.otherBehaviorAfter();
   },
   next: config => () => {
-      config.otherBehaviorBefore();
+      config.otherBehaviorBefore && config.otherBehaviorBefore();
 
       let list = document.getElementById(config.listId);
       let listElem = list.querySelectorAll('li');
+
       config.position = Math.max(
           config.position - config.shiftWidth * config.count,
           -config.shiftWidth * (listElem.length - config.count)
       );
       list.style.marginLeft = config.position + config.sizeType;
 
-      config.otherBehaviorAfter();
+      config.otherBehaviorAfter && config.otherBehaviorAfter();
   }
 };
 
@@ -54,7 +55,16 @@ const gallerySliderConfig = {
     }
 };
 
-
 document.getElementById('prev').addEventListener('click', slider.prev(gallerySliderConfig));
 document.getElementById('next').addEventListener('click', slider.next(gallerySliderConfig));
 
+const partnersSliderConfig = {
+    shiftWidth: 10,
+    position: 0,
+    count: 6,
+    listId: 'partners-list',
+    sizeType: 'vw'
+};
+
+document.getElementById('partners-prev').addEventListener('click', slider.prev(partnersSliderConfig));
+document.getElementById('partners-next').addEventListener('click', slider.next(partnersSliderConfig));

@@ -1,0 +1,67 @@
+#partners-slider-container {
+  padding: 3% 0;
+  display: flex;
+  justify-content: center;
+
+  .partners-slider {
+    width: 60vw;
+    overflow: hidden;
+    display: flex;
+
+    ul {
+      display: flex;
+      justify-content: left;
+      width: 150vw;
+      padding: 0;
+      list-style: none;
+      transition: margin-left 1s;
+
+      li {
+        width: 10vw;
+        height: 3vw;
+        text-align: center;
+
+        img {
+          height: 100%;
+        }
+      }
+    }
+  }
+  button {
+    outline: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+
+    .top-arrow, .bottom-arrow {
+      width: 15px;
+      height: 2px;
+      background: black;
+    }
+  }
+
+  button:first-child {
+    .top-arrow {
+      transform: rotate(135deg);
+      margin-bottom: 8px;
+    }
+    .bottom-arrow {
+      transform: rotate(45deg);
+    }
+  }
+
+  button:last-child {
+    .top-arrow {
+      transform: rotate(45deg);
+      margin-bottom: 8px;
+    }
+    .bottom-arrow {
+      transform: rotate(135deg);
+    }
+  }
+
+  button:hover {
+    background: white;
+    box-sizing: content-box;
+  }
+}
