@@ -7,6 +7,7 @@
     overflow: hidden;
 
     ul {
+      overflow: hidden;
       display: flex;
       width: 1000vw;
       padding: 0;
@@ -22,6 +23,19 @@
 
         img {
           height: 100%;
+          transition: margin-top 0.7s ease 1s;
+        }
+
+        .hidden:first-child {
+          margin-top: -26vw;
+        }
+
+        .hidden:last-child {
+          margin-top: 26vw;
+        }
+
+        .visible {
+          margin-top: 0;
         }
       }
     }
@@ -125,6 +139,8 @@
     }
 
     span {
+      text-align: center;
+      width: 90px;
       top: 50%;
       margin-bottom: -0.625em;
       font-size: 18px;
