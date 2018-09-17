@@ -84,7 +84,8 @@ gulp.task('build', gulp.series(
 );
 
 gulp.task('watch', () => {
-  gulp.watch('./src/assets/svg/**/*.svg', gulp.series('assets:svg'));gulp.watch('./src/less/**/*.less', gulp.series('less'));
+  gulp.watch('./src/assets/svg/**/*.svg', gulp.series('assets:svg'));
+  gulp.watch('./src/less/**/*.less', gulp.series('less'));
   gulp.watch('./src/js/**/*.js', gulp.series('js'));
   gulp.watch('./src/assets/**/*.html', gulp.series('assets:html'));
   gulp.watch('./src/assets/**/*.{png,jpg}', gulp.series('assets:pictures'));
