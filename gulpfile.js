@@ -11,6 +11,8 @@ const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const gulpIf = require('gulp-if');
 const imagemin = require('gulp-imagemin');
+const svgSprite = require('gulp-svg-sprite');
+
 
 
 const isDev = !process.env.NODE_ENV || process.env.NODE_ENV === 'development';
@@ -43,9 +45,28 @@ gulp.task('assets:html', () => {
 });
 
 gulp.task('assets:pictures', () => {
-  return gulp.src('./src/assets/**/*.{png,svg,jpg}', { since: gulp.lastRun('assets:pictures') })
+  return gulp.src('./src/assets/**/*.{png,jpg}', { since: gulp.lastRun('assets:pictures') })
     .pipe(gulpIf(!isDev, imagemin()))
     .pipe(gulp.dest('./public'));
+});
+
+gulp.task('assets:svg', () => {
+  return gulp.src('./src/assets/svg/**/*.svg')
+      .pipe(svgSprite({
+          mode: {
+            css: {
+              dest: '.',
+              bust: false,
+              sprite: 'svg/sprite.svg',
+              render: {
+                less: {
+                  dest: 'sprite.less'
+                }
+              }
+            }
+          }
+      }))
+      .pipe(gulpIf('*.less', gulp.dest('./tmp'), gulp.dest('./public')))
 });
 
 gulp.task('clean', () => {
@@ -53,14 +74,14 @@ gulp.task('clean', () => {
 });
 
 gulp.task('build', gulp.series(
-  'clean', gulp.parallel('less', 'assets:html', 'assets:pictures', 'js'))
+  'clean', 'assets:svg', gulp.parallel('less', 'assets:html', 'assets:pictures', 'js'))
 );
 
 gulp.task('watch', () => {
-  gulp.watch('./src/less/**/*.less', gulp.series('less'));
+  gulp.watch('./src/assets/svg/**/*.svg', gulp.series('assets:svg'));gulp.watch('./src/less/**/*.less', gulp.series('less'));
   gulp.watch('./src/js/**/*.js', gulp.series('js'));
   gulp.watch('./src/assets/**/*.html', gulp.series('assets:html'));
-  gulp.watch('./src/assets/**/*.{png,svg,jpg}', gulp.series('assets:pictures'));
+  gulp.watch('./src/assets/**/*.{png,jpg}', gulp.series('assets:pictures'));
 });
 
 gulp.task('serve', () => {

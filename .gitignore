@@ -11,3 +11,6 @@ node_modules/
 
 # Production build
 public/
+
+# Temporary files
+tmp/
