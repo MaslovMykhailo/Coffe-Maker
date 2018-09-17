@@ -53,11 +53,17 @@ gulp.task('assets:pictures', () => {
 gulp.task('assets:svg', () => {
   return gulp.src('./src/assets/svg/**/*.svg')
       .pipe(svgSprite({
+          shape: {
+            spacing: {
+              padding: 50
+            }
+          },
           mode: {
             css: {
               dest: '.',
               bust: false,
               sprite: 'svg/sprite.svg',
+              layout: 'vertical',
               render: {
                 less: {
                   dest: 'sprite.less'

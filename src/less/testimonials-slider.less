@@ -1,11 +1,12 @@
 #testimonials-slider {
-  margin: 2.8% auto;
+  margin: 2.8% auto 2.6%;
   width: 62vw;
   position: relative;
 
   article {
     width: 16.66%;
     float: left;
+    position: relative;
 
     h3 {
       margin-top: 2.5%;
@@ -25,6 +26,14 @@
     img {
       width: 14.2%;
     }
+
+    .facebook {
+      cursor: pointer;
+      position: absolute;
+      left: 54.5%;
+      top: 6.4%;
+      width: 3.3%;
+    }
   }
 
   figure {
@@ -35,6 +44,14 @@
   #overflow {
     width: 100%;
     overflow: hidden;
+  }
+
+  label, a {
+    cursor: pointer;
+  }
+
+  input {
+    display: none;
   }
 
   #controls {
@@ -53,14 +70,6 @@
       background: black;
     }
   }
-}
-
-label, a {
-  cursor: pointer;
-}
-
-input {
-  display: none;
 }
 
 #switch1:checked ~ #slides figure {
@@ -97,8 +106,9 @@ input {
   top: 47%;
   left: 0;
   position: absolute;
-  background: url("svg/testimonials/prev-arrow.svg") 10px center no-repeat;
-  background-size: 14px 14px;
+  .svg-testimonials--prev-arrow;
+  background-position-y: 99.5%;
+  background-size: 50px;
   border-radius: 50%;
   height: 34px;
   width: 34px;
@@ -114,8 +124,9 @@ input {
   top: 47%;
   right: 0;
   position: absolute;
-  background: url("svg/testimonials/next-arrow.svg") 11px center no-repeat;
-  background-size: 14px 14px;
+  .svg-testimonials--next-arrow;
+  background-position-y: 88.4%;
+  background-size: 50px;
   border-radius: 50%;
   height: 34px;
   width: 34px;
