@@ -9,7 +9,7 @@
 
   article {
     padding-top: 2.7%;
-    padding-bottom: 3.1%;
+    padding-bottom: 3%;
     width: 62%;
 
     span {
@@ -29,57 +29,65 @@
   }
 
   table {
-    width: 62%;
+    width: 62.5%;
     margin: auto;
     border-collapse: collapse;
     border: 1px solid white;
 
-    td {
-      width: 33.3%;
-      border: 1px solid white;
-      height: 75px;
-      color: white;
-      text-align: center;
-      font-size: 11px;
+    tr {
+      height: 78px;
 
-      a {
-        cursor: pointer;
-        margin: 50px;
-      }
+      td {
+        width: 33.8%;
+        border: 1px solid white;
+        color: white;
+        text-align: center;
+        font-size: 11px;
 
-      a:hover {
-        color: #eab96a;
-      }
+        a {
+          cursor: pointer;
+          margin: 25px;
+        }
 
-      .phone {
-        .svg-footer--phone;
-        background-size: 70px;
-        background-position-x: 50%;
-      }
+        a:hover {
+          color: #eab96a;
+        }
 
-      .location {
-        .svg-footer--location;
-        background-size: 70px;
-        background-position-x: 50%;
-      }
+        div {
+          display: inline-block;
+          width: 40%;
+          height: 73px;
+        }
 
-      .mail {
-        .svg-footer--mail;
-        background-size: 70px;
-        background-position-x: 50%;
-      }
-
-      div {
-        display: inline-block;
-        width: 40%;
-        height: 100%;
-      }
-
-      img {
-        width: 3px;
-        margin-bottom: 0.2em;
+        img {
+          width: 3px;
+          margin-bottom: 0.2em;
+        }
       }
     }
+
+    tr:first-child {
+      height: 70px;
+    }
+
+    .phone {
+      .svg-footer--phone;
+      background-size: 70px;
+      background-position-x: 50%;
+    }
+
+    .location {
+      .svg-footer--location;
+      background-size: 70px;
+      background-position: 60% -1%;
+    }
+
+    .mail {
+      .svg-footer--mail;
+      background-size: 70px;
+      background-position : 55% 13%;
+    }
+
   }
 
   footer {
