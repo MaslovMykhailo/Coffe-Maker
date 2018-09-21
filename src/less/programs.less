@@ -34,6 +34,7 @@
         width: 21%;
         padding: 0 0 2.7%;
         margin: 0 2.4%;
+        border-bottom: 2px solid rgba(0, 0, 0, 0);
         a {
           font-weight: bold;
           cursor: pointer;
@@ -54,6 +55,18 @@
         }
       }
     }
+  }
+
+  #basic, #premium, #platinum {
+    transition: opacity .5s ease;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .visible {
+    display: block;
   }
 
   figure {
