@@ -47,7 +47,7 @@ function smoothScrollTo(event) {
     animate({
         duration: duration,
         timing: makeEaseOut(circ),
-        draw(progress) {
+        draw: function(progress) {
             window.scrollTo(0, initScrollTop + difScroll * progress);
         }
     });

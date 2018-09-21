@@ -13,10 +13,11 @@ function changeProgram() {
         programList[i].classList.add('hidden');
     }
 
+    this.parentElement.classList.add('active');
     var chooseProgram = document.getElementById(this.innerText.toLowerCase());
     chooseProgram.classList.add('visible');
     chooseProgram.style.opacity = '0';
-    this.parentElement.classList.add('active');
+
     setTimeout(function () {
         chooseProgram.style.opacity = '1';
     }, 15);
